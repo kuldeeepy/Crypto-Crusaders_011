@@ -1,0 +1,45 @@
+
+body {
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/897/950/537/ubuntu-linux-gradient-minimalism-wallpaper-preview.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+.dock {
+    position: absolute;  
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dock-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(122, 144, 147, 0.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.dock-icon img {
+    width: 80%;
+}
+
+.dock-icon:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .dock-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .dock {
+        left: 10px;
+    }
+}
