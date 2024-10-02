@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Shutdown Animation</title>
+    <link rel="stylesheet" href="Windows.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center-align items */
+}
+
+.spinner {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+    margin-right:95px; /* Space between spinner and text */
+}
+
+.dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff; /* White dots */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 40px 40px; /* Center of the spinner */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: move 1.5s linear infinite;
+}
+
+/* Apply delay to each dot to create the "head and tail" effect */
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+.dot:nth-child(4) { animation-delay: 0.6s; }
+.dot:nth-child(5) { animation-delay: 0.8s; }
+.dot:nth-child(6) { animation-delay: 1s; }
+
+/* Keyframe to move the dots around the center */
+@keyframes move {
+    0% {
+        transform: rotate(0deg) translateX(40px);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(180deg) translateX(40px);
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg) translateX(40px);
+        opacity: 0;
+    }
+}
+
+
+/* Style for the subtext */
+.subtext {
+    font-size: 20px; /* Size of the subtext */
+    font-family: Arial, sans-serif; /* Font family */
+    text-align: center; /* Center-align the subtext */
+    margin-top: 10px; /* Space above the subtext */
+}
+</style>
+<body>
+    <div class="container">
+        <div class="spinner">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="subtext">Logging Out...</div>
+    </div>
+</body>
+</html>

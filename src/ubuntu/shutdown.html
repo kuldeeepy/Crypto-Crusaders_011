@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Ubuntu.css">
+    <title>Ubuntu Shutdown Animation</title>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4e1f29; /* Dark background to match the Ubuntu theme */
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.container {
+    text-align: center;
+}
+
+.ubuntu-logo {
+    font-size: 64px; /* Adjust size as needed */
+    position: relative;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between logo and dots */
+}
+
+.dots .dot {
+    width: 15px; /* Dot size */
+    height: 15px; /* Dot size */
+    background-color: white; /* Start as white */
+    border-radius: 50%; /* Make it round */
+    margin: 0 5px;
+    animation: loading 1.5s infinite; /* Infinite loading animation */
+}
+
+@keyframes loading {
+    0%, 100% {
+        background-color: white; /* Start and end with white */
+    }
+    50% {
+        background-color: #f4c20d; /* Change to orange */
+    }
+}
+
+.dots .dot:nth-child(1) {
+    animation-delay: 0s; /* No delay for first dot */
+}
+
+.dots .dot:nth-child(2) {
+    animation-delay: 0.3s; /* Delay for second dot */
+}
+
+.dots .dot:nth-child(3) {
+    animation-delay: 0.6s; /* Delay for third dot */
+}
+
+.dots .dot:nth-child(4) {
+    animation-delay: 0.9s; /* Delay for fourth dot */
+}
+
+.dots .dot:nth-child(5) {
+    animation-delay: 1.2s; /* Delay for fifth dot */
+}
+</style>
+<body>
+    <div class="container">
+        <div class="ubuntu-logo">ubuntu</div>
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>
