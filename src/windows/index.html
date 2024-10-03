@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>windows</title>
     <link rel="stylesheet" href="./windows.css"/>
+    <script>
+            window.onload = function() {
+            if (!sessionStorage.getItem('reloaded')) {
+                sessionStorage.setItem('reloaded', 'true');
+                window.location.href = 'shutdown.html'; // Redirect to the loader page on first load
+            } else {
+                sessionStorage.removeItem('reloaded'); // Clear the flag after redirecting back
+            }
+        };
+    </script>
 </head>
 <body class="container">
     <script src="windows.js"></script>
