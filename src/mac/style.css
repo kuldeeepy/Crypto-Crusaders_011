@@ -14,35 +14,207 @@ body {
     justify-content: space-between;
 }
 
-.menu-bar {
+header{
+    width: 100%;
+    background-color:rgb(255, 192, 231);
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255, 192, 203, 0.7);
-    padding: 10px;
+    align-items: center;
 }
-
-.menu-left, .menu-right {
+.menu-right {
     display: flex;
     align-items: center;
 }
-
 .menu-logo {
     width: 20px;
     height: 20px;
     margin-right: 10px;
 }
-
-.menu-item {
-    margin-right: 15px;
-    color: black;
-    font-size: 14px;
-}
-
 .menu-icon {
     width: 18px;
     height: 18px;
     margin-right: 15px;
 }
+
+/* left header section */
+.unorderlist{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    /* background-color: gold; */
+}
+.unorderlist li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0.8rem;
+}
+.unorderlist li button{
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    
+}
+/* left header */
+/* slider section */
+/* finder slider section */
+.slideFinder{
+    width: 200px;
+    padding: 20px 30px 20px 30px;
+    background-color: rgba(0, 0, 0, 0.497);
+    color: white;
+    position: fixed;
+    top: -400px;
+    left: 0px;
+    transition:0.3s ease-in;
+   }
+.slideFinder>div{
+     margin-top: 10px;
+}
+.slidegoFinder{
+  transform: translateY(42px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* file slider section */
+.slideFile{
+    width: 200px;
+    padding: 20px 30px 20px 30px;
+    background-color:  rgba(0, 0, 0, 0.497);
+    color: white;
+    position: fixed;
+    top: -400px;
+    left: 150px;
+    transition:0.3s ease-in;
+}
+.slideFile>div{
+    margin-top: 10px;
+}
+.slidegoFile{
+    transform: translateY(42px);
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+/* slider edit */
+.slideEdit>div{
+    margin-top: 10px;
+}
+.slideEdit{
+    width: 200px;
+    padding: 20px 30px 20px 30px;
+    background-color:  rgba(0, 0, 0, 0.497);
+    color: white;
+    position: fixed;
+    top: -400px;
+    left: 200px;
+    transition:0.3s ease-in;
+}
+.slidegoEdit{
+    transform: translateY(42px);
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+/* slider go */
+.slideGo>div{
+    margin-top: 10px;
+}
+.slideGo{
+    width: 200px;
+    padding: 20px 30px 20px 30px;
+    background-color:  rgba(0, 0, 0, 0.497);
+    color: white;
+    position: fixed;
+    top: -400px;
+    left: 300px;
+    transition:0.3s ease-in;
+}
+.slidegoGo{
+    transform: translateY(42px);
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+/* help slider */
+.slideHelp>div{
+    margin-top: 10px;
+}
+.slideHelp{
+    width: 200px;
+    padding: 20px 30px 20px 30px;
+    background-color:  rgba(0, 0, 0, 0.497);
+    color: white;
+    position: fixed;
+    top: -400px;
+    left: 500px;
+    transition:0.3s ease-in;
+}
+.slidegoHelp{
+    transform: translateY(42px);
+    position: absolute;
+    top: 0px;
+    left: 500px;
+}
+
+/* right header section */
+.righthead{
+    position: relative;
+}
+.battery:hover::after{
+   content: "Battery Status : 45% remaning";
+   position: absolute;
+   top: 30px;
+   left:-70px;
+   background-color:rgba(26, 0, 0, 0.656);
+   color:rgba(255, 255, 255,0.9);
+   font-size: 16px;
+   padding: 10px 5px;
+   border-radius: 4px;
+}
+
+.speaker:hover::after{
+   content: "Speakers (realtek(R) Audio):80%";
+   position: absolute;
+   top: 30px;
+   left:0px;
+    background-color:rgba(26, 0, 0, 0.656);
+    color:rgba(255, 255, 255,0.9);
+    font-size: 16px;
+    padding: 10px 5px;
+    border-radius: 4px;
+}
+.wifi:hover::after{
+    content: "POCO M6 5G Pro Internet access";
+    position: absolute;
+    top: 30px;
+      left:0px;
+      background-color:rgba(26, 0, 0, 0.656);
+      color:rgba(255, 255, 255,0.9);
+      font-size: 16px;
+      padding: 10px 5px;
+      border-radius: 4px;
+}
+.search:hover::after{
+      content: "seach";
+      position: absolute;
+      top: 30px;
+      left:148px;
+      background-color:rgba(26, 0, 0, 0.656);
+      color:rgba(255, 255, 255,0.9);
+      font-size: 16px;
+      padding: 10px 5px;
+      border-radius: 4px;
+}
+
+
 
 .time {
     color: black;
@@ -56,20 +228,24 @@ body {
 }
 
 .icon {
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    border-radius: 15px;
+    margin-bottom: auto;
     display: flex;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: none;
+    border-radius: 15px;
     justify-content: center;
-    align-items: center;
+    align-items: center ;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    align-self: start;
 }
 
 .icon img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .icon-container:hover .icon {
@@ -99,7 +275,7 @@ body {
 .dock-icon {
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: none;
     border-radius: 15px;
     margin: 0 10px;
     display: flex;
@@ -109,13 +285,147 @@ body {
 }
 
 .dock-icon img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .dock-icon:hover {
     transform: translateY(-10px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slideFinderLogo{
+    width: 80%;
+    margin:0px auto;
+   box-shadow: 4px 8px 6px 4px rgba(0,0,0,0.5);
+    position: fixed;
+    top: -850px;
+    left: 200px;
+    background-color: white;
+}
+.slideFinderLogo>div{
+margin-top: 10px;
+}
+.slidegoFinderLogo{
+transform: translateX(0px);
+position: absolute;
+top: 0px;
+left: 200px;
+}
+
+/* container */
+.containerF{
+    width: 100%;
+    display: flex;
+    padding:8px 10px;
+}
+.leftContainer{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right: 1px solid  rgba(0,0,0,0.5);
+}
+.leftContainer>div{
+    margin-top: 20px;
+}
+
+.left-one-div{
+    display: flex;
+}
+
+.left-one-div div:nth-child(1){
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.left-one-div div:nth-child(2){
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.left-one-div div:nth-child(3){
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.left-two-div{
+    /* background-color: aquamarine; */
+    border-right: 10px solid rgba(0,0,0,0.5);
+}
+.left-two-div>div{
+    margin-top: 10px;
+  
+}
+.left-two-div>div:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.left-two-div>div span{
+    margin-left: 10px;
+}
+.left-three-div>div{
+    margin-top: 10px;
+}
+.left-three-div>div span{
+    margin-left: 10px;
+}
+.left-three-div>div:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.left-four-div>div{
+    margin-top: 10px;
+}
+.left-four-div>div span{
+    margin-left: 10px;
+}
+.left-four-div>div:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.rightContainer{
+    width: 140%;
+    height: 100px;
+}
+.righttop{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+    border: 1px solid  rgba(0,0,0,0.5);
+}
+.righttop i{
+  font-size: 25px;
+}
+.rightbottom img{
+  width:60px;
+}
+.rightbottom{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 30px;
+    margin-top: 70px;
+    padding-left: 10px;
+}
+.rightbottom>div{
+    border-top: 1px solid rgba(0,0,0,0.4);
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    padding: 10px 0px;
+}
+.rightbottom>div img{
+    transition: transform 0.3s ease-in;
+
+}
+.rightbottom>div img:hover{
+    transform: translateY(-15px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 
