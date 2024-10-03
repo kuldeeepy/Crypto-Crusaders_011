@@ -7,19 +7,24 @@ body {
     overflow: hidden;
 }
 .dock {
-    position: absolute;  
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    background-color: rgb(56, 53, 53);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 0;
 }
 
 .dock-icon {
     width: 60px;
     height: 60px;
-    background-color: rgba(122, 144, 147, 0.8);
+    background-color: rgba(122, 144, 147, 0.8); 
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -31,8 +36,21 @@ body {
     width: 80%;
 }
 
-.dock-icon:hover {
+.dock-icon:hover , #menu:hover{
     transform: scale(1.1);
+}
+#menu{
+    width: 60px;
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+    background-color: rgba(122, 144, 147, 0.8);
+    border-radius: 10px;
+    
+}
+#menu img{
+    width: 100%;
 }
 @media (max-width: 768px) {
     .dock-icon {
