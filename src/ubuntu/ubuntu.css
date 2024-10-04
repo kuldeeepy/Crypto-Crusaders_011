@@ -36,10 +36,13 @@ body {
     width: 80%;
 }
 
-.dock-icon:hover , #menu:hover{
+.dock-icon:hover , .menu:hover {
     transform: scale(1.1);
 }
-#menu{
+.icon:hover{
+    background-color: #867b7b;
+}
+.menu{
     width: 60px;
     height: 60px;
     margin-top: auto;
@@ -47,10 +50,68 @@ body {
     transition: transform 0.2s;
     background-color: rgba(122, 144, 147, 0.8);
     border-radius: 10px;
-    
 }
-#menu img{
+.menu img{
     width: 100%;
+}
+.menu-box {
+    position: absolute;
+    top: 200px;
+    left: -450px; /* Initially hidden on the left */
+    width: 600px;
+    background-color: rgba(128, 120, 120, 0.8);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+   
+    box-shadow: 0 4px 8px rgba(10, 10, 10, 0.5);
+    opacity: 0;
+    transition: all 1s ease-in-out; 
+}
+
+/* Icons inside menu box */
+.icon {
+    width: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    /* background-color: rgb(108, 100, 100); */
+    padding: 5px;
+    border-radius: 8px;
+    transform: translateY(20px); /* Icons will slide in */
+    transition: all 0.5s ease-in-out;
+}
+
+.icon img {
+    width: 60px;
+
+}
+.icon span{
+    margin-top: 10px;
+}
+
+
+/* Toggle checkbox for menu button */
+#menu-toggle {
+    display: none;
+}
+
+/* Show menu box when the checkbox is checked */
+#menu-toggle:checked + .menu-box {
+    left: 90px; /* Slide in from left */
+    opacity: 1;
+}
+
+
+#menu-toggle:checked + .menu-box .icon {
+    opacity: 1; 
+    transform : translateY(00.5s);
 }
 @media (max-width: 768px) {
     .dock-icon {
