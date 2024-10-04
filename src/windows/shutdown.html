@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows Shutdown Animation</title>
-    <script-- type="text/javascript">
-        window.onload = function() {
-            setTimeout(function() {
-                window.location.href = 'index.html'; // Redirect to the main page after 5 seconds
-            }, 5000); // 5000 milliseconds = 5 seconds
-        };
-    </script>
+    <link rel="shortcut icon" href="https://ucarecdn.com/ff1adc4a-7401-4993-a319-7aa629fd7eb1/windowsicon.png" type="image/x-icon">
+    <title>Windows</title>
+    <link rel="stylesheet" href="Windows.css">
 </head>
 <style>
     * {
@@ -39,14 +34,14 @@ body, html {
     width: 100px;
     height: 100px;
     margin-bottom: 40px;
-    margin-right:95px; 
+    margin-right: 95px; /* Space between spinner and text */
 }
 
 .dot {
     position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #ffffff; 
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff; /* White dots */
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -87,17 +82,24 @@ body, html {
 }
 
 
+/* Style for the subtext */
 
-.subtext {
-    font-size: 20px; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    text-align: center; 
-    margin-top: 10px;
-    margin-right: 12px; 
+.container img {
+    width: 100px;
 }
+
+/* .subtext {
+    font-size: 20px; 
+    font-family: Arial, sans-serif; 
+    text-align: center;
+    margin-top: 10px;
+} */
+
 </style>
 <body>
     <div class="container">
+        <!-- <div class="subtext">Logging Out...</div> -->
+        <img src="https://ucarecdn.com/2caf7ae6-3d12-424e-ac91-373042727b51/windows.png" alt="windows">
         <div class="spinner">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -106,11 +108,10 @@ body, html {
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
-        <div class="subtext">Welcome</div>
     </div>
     <script>
         setTimeout(() => {
-            window.location.href = '/src/windows/index.html';
+            window.location.href = '/Crypto-Crusaders_011/src/windows/index.html';
         }, 1500);
     </script>
 </body>
