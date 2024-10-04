@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://ucarecdn.com/ff1adc4a-7401-4993-a319-7aa629fd7eb1/windowsicon.png" type="image/x-icon">
     <title>Windows</title>
-    <link rel="stylesheet" href="Windows.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = 'index.html'; // Redirect to the main page after 5 seconds
+            }, 1500); // 5000 milliseconds = 5 seconds
+        };
+    </script>
 </head>
 <style>
     * {
@@ -109,10 +115,5 @@ body, html {
             <div class="dot"></div>
         </div>
     </div>
-    <script>
-        setTimeout(() => {
-            window.location.href = '/Crypto-Crusaders_011/src/windows/index.html';
-        }, 1500);
-    </script>
 </body>
 </html>

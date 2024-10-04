@@ -6,7 +6,7 @@
 
 /* main section styling */
 body{
-    background-image: url('https://ucarecdn.com/89e80fec-4ce0-4d02-baf1-2e86e5df5f8d/windows11.jpg');
+    background-image: url('/Crypto-Crusaders_011/Assets/Icons/windows-11.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -108,6 +108,10 @@ body{
     opacity: 1;
     transition-delay: 0.4s;
 }
+#last:focus>div>.tooltip{
+    visibility: hidden;
+    transition: 0.1s ease-in-out;
+}
 #last:hover{
     background-color: rgba(128, 128, 128, 0.3);
     background-size: cover;
@@ -130,17 +134,10 @@ body{
     width: 40%;
     height: 80vh;
     background-color: rgb(210, 225, 239);
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
+    display: none;
     position: absolute;
     bottom: 120%;
-    transition: 0.5s ease-in;
     border-radius: 10px;
-}
-#taskbar>div>div>a:focus~#start{
-    visibility: visible;
-    opacity: 1;
 }
 #start>div{
     margin: 2rem;
@@ -186,6 +183,7 @@ body{
     margin: 1rem 0.3rem;
     color: #fff;
     padding: 1rem 0;
+    width: 80%;
 }
 #desktop img{
     width: 3rem;
@@ -196,6 +194,76 @@ body{
     border-radius: 5px;
     transition: 0.3s ease-in-out;
     color: black;
+}
+#lastdiv{
+    width: 24%;
+    height: 55vh;
+    background-color: #fff;
+    position: absolute;
+    bottom: 120%;
+    right: 1%;
+    display: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(210, 225, 239);
+}
+#lastgrid{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin: 1rem;
+}
+#lastgrid>div>div{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(155, 155, 155, 0.322);
+    border: none;
+    border-radius: 7px;
+}
+#lastgrid>div>div:hover{
+    background-color: #ffffff;
+}
+#lastgrid>div>div>img{
+    width: 24px;
+    height: 24px;
+}
+#lastgrid>div>h2{
+    text-align: center;
+}
+#brightness,#volume{
+    display: flex;
+}
+#brightness>input,#volume>input{
+    width: 70%;
+}
+#volume+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(155, 155, 155, 0.322);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#volume+div>div{
+    display: flex;
+}
+#volume+div>div>img{
+    width: 24px;
+    height: auto;
+}
+#volume+div>div:first-child:hover{
+    background-color: #ffffff;
+    transition: 0.2s ease;
+    border-radius: 5px;
+    padding-right: .5rem;
+}
+#volume+div>div:last-child>img:hover{
+    background-color: #ffffff;
+    transition: 0.3s ease;
+    border-radius: 5px;
 }
 @media screen and (min-width: 1047px) and (max-width: 1440px) {
     #start{
