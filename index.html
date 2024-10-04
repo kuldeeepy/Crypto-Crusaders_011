@@ -4,180 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Crypto-Crusaders_011/Assets/Images/logo.webp" type="image/x-icon">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://ucarecdn.com/3e3a55e2-e320-4e5e-b697-63cc2ce35eb9/logo.webp"
+      type="image/x-icon"
+    />
+
     <title>OS Simulation</title>
     <style>
-        body {
-            background-color: #111111;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
+      body {
+        /* background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('/Crypto-Crusaders_011/Assets/Images/pexels-markusspiske-1089438.jpg'); */
+        background: linear-gradient(135deg, #1e3a61 25%, #8a2e14 50%, #1c1f26 75%);
+        background-size: 400% 400%;
+        animation: gradientAnimation 10s ease infinite;
+        /* another */
+        /* --s: 200px;
+        --c1: #1d1d1d;
+        --c2: #4e4f51;
+        --c3: #3c3c3c;
+        background:
+          repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+          calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+          repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+        background-size: var(--s) calc(var(--s)*0.577); */
+        /* original */
+        background-color: #111111;
+        color: white;
+        font-family: "Courier New", Courier, monospace; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
 
-        /* Terminal window */
-        .terminal-container {
-            position: absolute;
-            top: 20%;
-            background-color: #2d2d2d;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            display: none; /* Hidden initially */
-            flex-direction: column;
-            overflow: hidden;
-            cursor: move; /* Cursor indicates draggable */
-        }
+      @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
 
-        /* Terminal header */
-        .terminal-header {
-            background-color: #212121;
-            padding: 2px 10px;
-            opacity: 0.89;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            cursor: grab; /* Grabbing cursor */
-        }
+      /* Terminal window */
+      .terminal-container {
+        position: absolute;
+        top: 20%;
+        background-color: #2d2d2d;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        display: none; 
+        flex-direction: column;
+        overflow: hidden;
+        cursor: move; 
+      }
 
-        .terminal-header button {
-            background-color: red;
-            border: none;
-            border-radius: 50%;
-            width: 13px;
-            height: 13px;
-            margin-right: 10px;
-            margin-left: 8px;
-            cursor: pointer;
-        }
+      /* Terminal header */
+      .terminal-header {
+        background-color: #212121;
+        padding: 2px 10px;
+        opacity: 0.89;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: grab; 
+      }
 
-        /* Terminal content */
-        .terminal-content {
-            background-color: #300a24;
-            padding: 20px;
-            color: #269661;
-            height: 300px;
-            overflow-y: auto;
-            padding: 5px 10px;
-        }
+      .terminal-header button {
+        background-color: red;
+        border: none;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        margin-right: 10px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
 
-        .terminal-content p {
-            color: white;
-            opacity: .8;
-        }
+      /* Terminal content */
+      .terminal-content {
+        background-color: #340b24;
+        padding: 20px;
+        color: #269661;
+        height: 300px;
+        overflow-y: auto;
+        padding: 5px 10px;
+      }
 
-        /* Align label and input */
-        .input-container {
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+      .terminal-content p {
+        color: white;
+        opacity: 0.8;
+      }
 
-        .terminal-input {
-            background: none;
-            border: none;
-            color: white;
-            opacity: .8;
-            font-size: 16px;
-            width: 100%;
-            outline: none;
-            padding-left: 8px;
-            caret-color: green;
-        }
+      /* Align label and input */
+      .input-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
 
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
+      .terminal-input {
+        background: none;
+        border: none;
+        color: white;
+        opacity: 0.8;
+        font-size: 16px;
+        width: 100%;
+        outline: none;
+        padding-left: 8px;
+        caret-color: green;
+      }
 
-        /* Custom blinking caret */
-        .terminal-input::after {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 1.1em;
-            background: green;
-            animation: blink 1s step-start infinite;
-            position: absolute;
-            left: calc(100% - 8px);
-            bottom: 0;
-            margin-left: -2px;
+      @keyframes blink {
+        50% {
+          opacity: 0;
         }
+      }
 
-        /* Graphical OS option */
-        .os-options {
-            /* text-align: center;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            text-align: start;
-            transform: translate(-50%, -50%); */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            gap: 10px;
-        }
+      /* Custom blinking caret */
+      .terminal-input::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 1.1em;
+        background: green;
+        animation: blink 1s step-start infinite;
+        position: absolute;
+        left: calc(100% - 8px);
+        bottom: 0;
+        margin-left: -2px;
+      }
 
-        .os-options div {
-            border: 1px solid rgba(245, 245, 245, 0.5);
-            height: 84px; 
-            width: 300px;
-            padding: 20px 25px;
-            background-color: #33333371;
-            border-radius: 6px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            box-sizing: border-box;
-        }
+      /* Graphical OS option */
+      .os-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 10px;
+      }
 
-        .os-options div:hover {
-            background-color: #333333c3;
-        }
+      .os-options div {
+        border: 1px solid rgba(245, 245, 245, 0.5);
+        height: 84px;
+        width: 300px;
+        padding: 20px 25px;
+        background-color: #33333371;
+        border-radius: 6px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        box-sizing: border-box;
+      }
 
-        #ubuntu img {
-            max-width: 65px;
-            object-fit: contain;
-            margin-left: -18px;
-            margin-right: -10px;
-        }
+      .os-options div:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        background-color: #444444;
+      }
 
-        #mac img {
-            max-width: 53px;
-            object-fit: contain;
-            margin-left: -12px;
-        }
+      #ubuntu img {
+        max-width: 68px;
+        object-fit: contain;
+        margin-left: -18px;
+        margin-right: -10px;
+      }
 
-        #mac img, #ubuntu img {
-            border-radius: 50%;
-        }
+      #mac img {
+        max-width: 53px;
+        object-fit: contain;
+        margin-left: -12px;
+      }
 
-        #window img {
-            max-width: 175px;
-        }
+      #mac img,
+      #ubuntu img {
+        border-radius: 50%;
+      }
 
-        #mac h2, #ubuntu h2, #window h2 {
-            color: gray;
-            font-weight: 550;
-            font-size: 29px;
-            letter-spacing: 1px;
-            font-family: system-ui;
-        }
+      #window img {
+        max-width: 75px;
+        margin-left: -12px;
+        margin-right: -2px;
+      }
 
-        .os-options p {
-            margin: 2px 0px 0px 7px;
-            font-size: 14px;
-            font-family: system-ui;
-        }
+      #mac h2,
+      #ubuntu h2,
+      #window h2 {
+        color: gray;
+        font-weight: 550;
+        font-size: 29px;
+        letter-spacing: 1px;
+        font-family: system-ui;
+      }
 
+      .os-options p {
+        margin: 2px 0px 0px 7px;
+        font-size: 14px;
+        font-family: system-ui;
+      }
     </style>
 </head>
 <body>
@@ -189,7 +222,32 @@
     </div>
     <div onclick="redirectToOS('mac')" id="mac">
         <img src="/Crypto-Crusaders_011/Assets/Images/Icon.png" alt="macOS">
+  </head>
+  <body>
+    <div class="os-options" id="os-options">
+      <div onclick="redirectToOS('ubuntu')" id="ubuntu">
+        <img
+          src="https://ucarecdn.com/e1067d8f-4dea-4b10-b025-d831ffe9ee18/ubuntu_logo.webp"
+          alt="linux"
+        />
+        <h2>Ubuntu</h2>
+      </div>
+      <div onclick="redirectToOS('mac')" id="mac">
+        <img
+          src="https://ucarecdn.com/0e68ea70-c234-4ade-a123-9b5f45f9521c/Icon.png"
+          alt="macOS"
+        />
+
         <h2>macOS</h2>
+      </div>
+      <div onclick="redirectToOS('window')" id="window">
+        <img
+          src="https://ucarecdn.com/ff1adc4a-7401-4993-a319-7aa629fd7eb1/windowsicon.png"
+          alt="windows"
+        />
+        <h2>Windows</h2>
+      </div>
+      <p onclick="openTerminal()">Prefer Terminal?</p>
     </div>
     <div onclick="redirectToOS('window')" id="window">
         <img src="/Crypto-Crusaders_011/Assets/Images/microsoft.webp" alt="windows">
@@ -197,40 +255,50 @@
     <p onclick="openTerminal()">Prefer Terminal?</p>
 </div>
 
-<!-- Hide terminal -->
-<div class="terminal-container" id="terminal">
-    <div class="terminal-header" id="terminal-header">
+    <!-- Hide terminal -->
+    <div class="terminal-container" id="terminal">
+      <div class="terminal-header" id="terminal-header">
         <button onclick="closeTerminal()"></button>
         <p>machine@masai:~</p>
-    </div>
-    <div class="terminal-content">
+      </div>
+      <div class="terminal-content">
         <p>Type "sudo install [os_name]" to install your preferred OS:</p>
         <div class="input-container">
-            <label for="terminal-input">machine@masai:~$</label>
-            <input class="terminal-input" type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+          <label for="terminal-input">machine@masai:~$</label>
+          <input
+            class="terminal-input"
+            type="text"
+            id="terminal-input"
+            autofocus
+            autocomplete="off"
+            spellcheck="false"
+          />
         </div>
+      </div>
     </div>
-</div>
 
-<script>
-    const terminalInput = document.getElementById('terminal-input');
-    const terminal = document.getElementById('terminal');
-    const osOptions = document.getElementById('os-options');
-    const terminalHeader = document.getElementById('terminal-header');
+    <script>
+      const terminalInput = document.getElementById("terminal-input");
+      const terminal = document.getElementById("terminal");
+      const osOptions = document.getElementById("os-options");
+      const terminalHeader = document.getElementById("terminal-header");
 
-    // Handling commands
-    terminalInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            const command = terminalInput.value.trim().toLowerCase();
-            if (command === 'sudo install ubuntu') {
-                window.location.href = '/src/ubuntu/shutdown.html';  //Ubuntu 
-            } else if (command === 'sudo install windows') {
-                window.location.href = '/src/windows/shutdown.html';  // Windows 
-            } else if (command === 'sudo install mac') {
-                window.location.href = '/src/mac/shutdown.html';  // macOS 
-            } else {
-                alert('sudo: command not found');
-            }
+      // Handling commands
+      terminalInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          const command = terminalInput.value.trim().toLowerCase();
+          if (command === "sudo install ubuntu") {
+            window.location.href =
+              "/Crypto-Crusaders_011/src/ubuntu/shutdown.html"; //Ubuntu
+          } else if (command === "sudo install windows") {
+            window.location.href =
+              "/Crypto-Crusaders_011/src/windows/shutdown.html"; // Windows
+          } else if (command === "sudo install mac") {
+            window.location.href =
+              "/Crypto-Crusaders_011/src/mac/shutdown.html"; // macOS
+          } else {
+            alert("sudo: command not found");
+          }
         }
     });
 
@@ -245,42 +313,57 @@
     }
 }
 
+=======
+      });
 
-    // Close terminal 
-    function closeTerminal() {
-        terminal.style.display = 'none';
-        osOptions.style.display = 'block';
-    }
+      // GUI buttons
+      function redirectToOS(os) {
+        if (os === "ubuntu") {
+          window.location.href =
+            "/Crypto-Crusaders_011/src/ubuntu/shutdown.html";
+        } else if (os === "mac") {
+          window.location.href = "/Crypto-Crusaders_011/src/mac/shutdown.html";
+        } else if (os === "window") {
+          window.location.href =
+            "/Crypto-Crusaders_011/src/windows/shutdown.html";
+        }
+      }
 
-    // Open terminal
-    function openTerminal() {
-        terminal.style.display = 'flex';
-        osOptions.style.display = 'none';
-    }
 
-    // Dragging functionality
-    let isDragging = false;
-    let offsetX, offsetY;
+      // Close terminal
+      function closeTerminal() {
+        terminal.style.display = "none";
+        osOptions.style.display = "block";
+      }
 
-    terminalHeader.addEventListener('mousedown', function (e) {
+      // Open terminal
+      function openTerminal() {
+        terminal.style.display = "flex";
+        osOptions.style.display = "none";
+      }
+
+      // Dragging functionality
+      let isDragging = false;
+      let offsetX, offsetY;
+
+      terminalHeader.addEventListener("mousedown", function (e) {
         isDragging = true;
         offsetX = e.clientX - terminal.getBoundingClientRect().left;
         offsetY = e.clientY - terminal.getBoundingClientRect().top;
-        terminalHeader.style.cursor = 'grabbing';
-    });
+        terminalHeader.style.cursor = "grabbing";
+      });
 
-    document.addEventListener('mousemove', function (e) {
+      document.addEventListener("mousemove", function (e) {
         if (isDragging) {
-            terminal.style.left = `${e.clientX - offsetX}px`;
-            terminal.style.top = `${e.clientY - offsetY}px`;
+          terminal.style.left = `${e.clientX - offsetX}px`;
+          terminal.style.top = `${e.clientY - offsetY}px`;
         }
-    });
+      });
 
-    document.addEventListener('mouseup', function () {
+      document.addEventListener("mouseup", function () {
         isDragging = false;
-        terminalHeader.style.cursor = 'grab';
-    });
-</script>
-
-</body>
+        terminalHeader.style.cursor = "grab";
+      });
+    </script>
+  </body>
 </html>
