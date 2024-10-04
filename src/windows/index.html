@@ -1,27 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>windows</title>
-    <link rel="shortcut icon" href="https://ucarecdn.com/ff1adc4a-7401-4993-a319-7aa629fd7eb1/windowsicon.png" type="image/x-icon">
+    <title>Windows</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./pics/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./pics/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./pics/favicon_io/favicon-16x16.png">
     <link rel="stylesheet" href="./windows.css"/>
-    <script>
-        window.onload = function() {
-        if (!sessionStorage.getItem('reloaded')) {
-            sessionStorage.setItem('reloaded', 'true');
-            window.location.href = 'shutdown.html'; // Redirect to the loader page on first load
-        } else {
-            sessionStorage.removeItem('reloaded'); // Clear the flag after redirecting back
-        }
-    };
-</script>
 </head>
 <body class="container">
-    <script src="windows.js"></script>
     <!-- this is outer box, every thing will be inside this box -->
     <div id=""> 
-        <!--  this is header section -->
+
         <header>
             <div id="desktop">
                 <div>
@@ -78,16 +70,52 @@
                         <figcaption>Chess Titans</figcaption>
                     </figure>
                 </div>
+                <div>
+                    <figure>
+                        <img src="https://img.icons8.com/?size=100&id=wlFMPtzt97an&format=png&color=000000" alt="Xbox">
+                        <figcaption>Xbox</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="https://img.icons8.com/?size=100&id=G9XXzb9XaEKX&format=png&color=000000" alt="Spotify">
+                        <figcaption>Spotify</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="https://img.icons8.com/?size=100&id=y8LwJFIz10QP&format=png&color=000000" alt="PUBG">
+                        <figcaption>PUBG</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="https://img.icons8.com/?size=100&id=WWogVNJDSfZ5&format=png&color=000000" alt="Photos">
+                        <figcaption>Photos Folder</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000" alt="VS Code">
+                        <figcaption>Visual Studio Code</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000" alt="MATLAB">
+                        <figcaption>MATLAB</figcaption>
+                    </figure>
+                </div>
             </div>
         </header>
-        <!-- this is main section all relevent content will be inside tha main section -->
+
         <main id="taskbar">
             <div id="first">
                 <div>pass</div>
             </div>
             <div>
-                <div>
-                    <a href="#"><img src="https://ucarecdn.com/ff1adc4a-7401-4993-a319-7aa629fd7eb1/windowsicon.png" alt="windows"></a>
+                <div id="startBtn">
+                    <a href="#"><img src="/Crypto-Crusaders_011/Assets/Icons/windows-icon.png" alt="windows"></a>
                     <p class="tooltip">Start</p>
                     <div id="start">
                         <div class="search">
@@ -150,49 +178,118 @@
                         </div>
                     </div>
                 </div>
-                <div id="search">
-                    <img src="https://ucarecdn.com/4042938d-f9ca-4183-8ed2-3021e5841c29/search_icon.png" alt="search">
+                <div class="search">
+                    <img src="/Crypto-Crusaders_011/Assets/Icons/search_icon.png" alt="search" style="height: 25px;">
                     <input type="text" placeholder="Search" >
                 </div>
                 <div>
-                    <a href="#"><img src="https://ucarecdn.com/0a4ce861-6561-4e2b-b197-35c1f3953a70/file_explorer_icon.png" alt="file_explorer"></a>
+                    <a href="#">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/file_explorer_icon.png" alt="file_explorer">
+                    </a>
                     <p class="tooltip">File Explorer</p>
                 </div>
                 <div>
-                    <a href="#"><img src="https://ucarecdn.com/18cebead-2eb1-4418-8e2d-7a1d33245818/microsoftstoreicon.png" alt="microsoft-store"></a>
+                    <a href="https://www.microsoft.com/en-in/store/top-free/apps/pc" target="_blank">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/microsoft-store-icon.png" alt="microsoft-store">
+                    </a>
                     <p class="tooltip">Microsoft Store</p>
                 </div>
                 <div>
-                    <a href="#"><img src="https://ucarecdn.com/07bb6f84-08b3-4ff6-be16-68d3662030b1/microsoftedgeicon.png" alt="microsoft-edge"></a>
+                    <a href="https://www.bing.com/%3Fcc%3Din" target="_blank">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/microsoft-edge-icon.png" alt="microsoft-edge">
+                    </a>
                     <p class="tooltip">Microsoft Edge</p>
                 </div>
                 <div>
-                    <a href="#"><img src="https://ucarecdn.com/c527a864-d2c3-4d0f-ba49-2b4bbe773035/googlemeeticon.png" alt="google-meet"></a>
+                    <a href="https://meet.google.com/landing" target="_blank">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/google-meet-icon.png" alt="google-meet">
+                    </a>
                     <p class="tooltip">Google Meet</p>
                 </div>
             </div>
             <div>
-                <div id="last">
+                <div id="last" tabindex="0">
                     <div>
-                        <img src="https://ucarecdn.com/fd83cb52-0223-4095-8666-f324f2484d17/wifiicon.png" alt="wifi">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/wifi-icon.png" alt="wifi">
                         <p class="tooltip">local wifi</p>
                     </div>
                     <div>
-                        <img src="https://ucarecdn.com/69b44549-1510-4327-97c4-7eb765da814b/volumeicon.png" alt="volume">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/volume-icon.png" alt="volume">
                         <p class="tooltip">audio</p>
                     </div>
                     <div>
-                        <img src="https://ucarecdn.com/daa170e8-b5c6-4cb9-a95e-769262f7a508/batteryicon.png" alt="battery">
+                        <img src="/Crypto-Crusaders_011/Assets/Icons/battery-icon.png" alt="battery">
                         <p class="tooltip">99% remaining</p>
+                    </div>
+                </div>
+                <div id="lastdiv">
+                    <div id="lastgrid">
+                        <div>
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=rOGbeYsOX8gR&format=png&color=000000" alt="wifi">
+                                <img src="https://img.icons8.com/?size=100&id=15812&format=png&color=000000" alt="arrow">
+                            </div>
+                            <h2>Realme GT Master Edition</h2>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=yIDsUyGXBoVy&format=png&color=000000" alt="bluetooth">
+                                <img src="https://img.icons8.com/?size=100&id=15812&format=png&color=000000" alt="arrow">
+                            </div>
+                            <h2>Not connected</h2>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=17485&format=png&color=000000" alt="airplane-mode">
+                            </div>
+                            <h2>Airplane mode</h2>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=6ggrvmTsNk74&format=png&color=000000" alt="battery-saver">
+                            </div>
+                            <h2>Battery saver</h2>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=Y56jZNPHTK0X&format=png&color=000000" alt="dark-mode">
+                            </div>
+                            <h2>Dark mode</h2>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=OCXqgxuKRsRU&format=png&color=000000" alt="accessibility">
+                            </div>
+                            <h2>Accessibility</h2>
+                        </div>
+                    </div>
+                    <div id="brightness">
+                        <img src="https://img.icons8.com/?size=100&id=JHsm5oZeWqae&format=png&color=000000" alt="brightness">
+                        <input type="range" id="brightnessRange" min="10" max="100" value="100">
+                    </div>
+                    <div id="volume">
+                        <img src="https://img.icons8.com/?size=100&id=22778&format=png&color=000000" alt="volume">
+                        <input type="range" id="volumerange" min="0" step="0.01" max="1" value="0.5">
+                    </div>
+                    <div>
+                        <div>
+                            <img src="https://img.icons8.com/?size=100&id=zddfYtvTqQmM&format=png&color=000000" alt="battery">
+                            <h2>99%</h2>
+                        </div>
+                        <div>
+                            <img src="https://img.icons8.com/?size=100&id=15049&format=png&color=000000" alt="edit">
+                            
+                            <img src="https://img.icons8.com/?size=100&id=364&format=png&color=000000" alt="settings">
+                        </div>
                     </div>
                 </div>
                 <div id="datetime"></div>
             </div>
         </main>
         
-        <!-- Inside footer there will be address or contact -->
         <footer></footer>
-
+        
     </div>
+    <script type="text/javascript" src="windows.js"></script>
 </body>
 </html>
