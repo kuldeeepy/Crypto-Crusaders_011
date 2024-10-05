@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const year = now.getFullYear();
         const hours = String(now.getHours()).padStart(2, '0');
         const minutes = String(now.getMinutes()).padStart(2, '0'); 
-        return `${day}-${month}-${year}\n${hours}:${minutes}`;
+        return `${day}-${month+1}-${year}\n${hours}:${minutes}`;
     }
     datetimeDisplay.textContent = getCurrentDateTime();
     setInterval(() => {
