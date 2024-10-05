@@ -98,7 +98,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 #taskbar>div>#last img{
     height: 1.2rem;
@@ -139,6 +138,7 @@ body{
     position: absolute;
     bottom: 120%;
     border-radius: 10px;
+    transition: transform .3s ease-in-out;
 }
 #start>div{
     margin: 2rem;
@@ -207,6 +207,7 @@ body{
     border: none;
     border-radius: 10px;
     background-color: rgb(210, 225, 239);
+    /* transition: transform .3s ease-in-out; */
 }
 #lastgrid{
     display: grid;
@@ -266,6 +267,13 @@ body{
     transition: 0.3s ease;
     border-radius: 5px;
 }
+
+/* .slide-in{
+    transform: translateY(0);
+}
+.slide-out{
+    transform: translateY(120%);
+} */
 @media screen and (min-width: 1047px) and (max-width: 1440px) {
     #start{
         width: 50%;
