@@ -43,3 +43,19 @@ document.getElementById('brightnessRange').addEventListener('input', function() 
     var brightnessValue = this.value + '%';
     document.body.style.filter = 'brightness(' + brightnessValue + ')';
 });
+
+// const clickableDiv = document.getElementById('last');
+// const slidingDiv = document.getElementById('lastdiv');
+
+// clickableDiv.addEventListener('click', () => {
+//     slidingDiv.classList.toggle('slide-in');
+//     slidingDiv.classList.toggle('slide-out');
+// });
+
+// const startBtn = document.getElementById('startBtn');
+// const start = document.getElementById('start');
+
+// startBtn.addEventListener('click', () => {
+//     start.classList.toggle('slide-in');
+//     start.classList.toggle('slide-out');
+// });
