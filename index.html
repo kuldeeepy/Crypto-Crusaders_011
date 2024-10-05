@@ -8,6 +8,7 @@
   <style>
     body {
       background: linear-gradient(135deg, #1e3a61 25%, #8a2e14 50%, #1c1f26 75%);
+      /* background: linear-gradient(135deg, #1e3a61 25%, #00000081 50%, #1e3a61 75%); */
       background-size: 400% 400%;
       animation: gradientAnimation 10s ease infinite;
       color: white;
@@ -214,11 +215,11 @@
       if (e.key === "Enter") {
         const command = terminalInput.value.trim().toLowerCase();
         if (command === "sudo install ubuntu") {
-          window.location.href = "src/ubuntu/shutdown.html";
+          window.location.href = "src/ubuntu/startup.html";
         } else if (command === "sudo install windows") {
-          window.location.href = "src/windows/shutdown.html";
+          window.location.href = "src/windows/startup.html";
         } else if (command === "sudo install mac") {
-          window.location.href = "src/mac/shutdown.html";
+          window.location.href = "src/mac/startup.html";
         } else {
           alert("sudo: command not found");
         }
@@ -230,11 +231,11 @@
     // Redirect GUI buttons
     function redirectToOS(os) {
       if (os === "ubuntu") {
-        window.location.href = "src/ubuntu/shutdown.html";
+        window.location.href = "src/ubuntu/startup.html";
       } else if (os === "mac") {
-        window.location.href = "src/mac/shutdown.html";
+        window.location.href = "src/mac/startup.html";
       } else if (os === "window") {
-        window.location.href = "src/windows/shutdown.html";
+        window.location.href = "src/windows/startup.html";
       }
     }
 
