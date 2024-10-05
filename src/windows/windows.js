@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.onload = function() {
     if (performance.navigation.type === 1) {
-        window.location.href = "shutdown.html";
+        window.location.href = "startup.html";
     }
 };
 
