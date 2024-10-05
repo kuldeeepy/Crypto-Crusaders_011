@@ -214,11 +214,11 @@
       if (e.key === "Enter") {
         const command = terminalInput.value.trim().toLowerCase();
         if (command === "sudo install ubuntu") {
-          window.location.href = "/Crypto-Crusaders_011/src/ubuntu/shutdown.html";
+          window.location.href = "src/ubuntu/shutdown.html";
         } else if (command === "sudo install windows") {
-          window.location.href = "/Crypto-Crusaders_011/src/windows/shutdown.html";
+          window.location.href = "src/windows/shutdown.html";
         } else if (command === "sudo install mac") {
-          window.location.href = "/Crypto-Crusaders_011/src/mac/shutdown.html";
+          window.location.href = "src/mac/shutdown.html";
         } else {
           alert("sudo: command not found");
         }
@@ -228,11 +228,11 @@
     // Redirect GUI buttons
     function redirectToOS(os) {
       if (os === "ubuntu") {
-        window.location.href = "/Crypto-Crusaders_011/src/ubuntu/shutdown.html";
+        window.location.href = "src/ubuntu/shutdown.html";
       } else if (os === "mac") {
-        window.location.href = "/Crypto-Crusaders_011/src/mac/shutdown.html";
+        window.location.href = "src/mac/shutdown.html";
       } else if (os === "window") {
-        window.location.href = "/Crypto-Crusaders_011/src/windows/shutdown.html";
+        window.location.href = "src/windows/shutdown.html";
       }
     }
 
