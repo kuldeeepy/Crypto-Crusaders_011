@@ -21,24 +21,6 @@ window.onload = function() {
     }
 };
 
-// document.getElementById('last').onclick = function() {
-//     var lastdiv = document.getElementById('lastdiv');
-//     if (lastdiv.style.display === 'none') {
-//         lastdiv.style.display = 'block';
-//     } else {
-//         lastdiv.style.display = 'none';
-//     }
-// };
-
-// document.getElementById('startBtn').onclick = function() {
-//     var start = document.getElementById('start');
-//     if (start.style.display === 'none') {
-//         start.style.display = 'block';
-//     } else {
-//         start.style.display = 'none';
-//     }
-// };
-
 document.getElementById('brightnessRange').addEventListener('input', function() {
     var brightnessValue = this.value + '%';
     document.body.style.filter = 'brightness(' + brightnessValue + ')';
