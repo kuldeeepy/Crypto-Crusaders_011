@@ -43,13 +43,13 @@ Crypto-Crusaders_011/
 
 A detailed walkthrough of all the features of our project.
 
-### [Watch the video &#11118;](https://iamkuldeep.vercel.app)
+### [Watch the video &#11118;](https://www.youtube.com)
 
 ## Video Walkthrough of the codebase
 
 A quick walkthrough of the project structure.
 
-### [Watch the video &#11118;](https://iamkuldeep.vercel.app)
+### [Watch the video &#11118;](https://www.youtube.com)
 
 ## Features
 
