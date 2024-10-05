@@ -215,27 +215,27 @@
       if (e.key === "Enter") {
         const command = terminalInput.value.trim().toLowerCase();
         if (command === "sudo install ubuntu") {
-          window.location.href = "src/ubuntu/startup.html";
+          window.location.href = "src/ubuntu/shutdown.html";
         } else if (command === "sudo install windows") {
-          window.location.href = "src/windows/startup.html";
+          window.location.href = "src/windows/shutdown.html";
         } else if (command === "sudo install mac") {
-          window.location.href = "src/mac/startup.html";
+          window.location.href = "src/mac/shutdown.html";
         } else {
           alert("sudo: command not found");
         }
 
-        terminalInput.value = ""; // clear the terminal
+        terminalInput.value = ""; // clear terminal
       }
     });
 
     // Redirect GUI buttons
     function redirectToOS(os) {
       if (os === "ubuntu") {
-        window.location.href = "src/ubuntu/startup.html";
+        window.location.href = "src/ubuntu/shutdown.html";
       } else if (os === "mac") {
-        window.location.href = "src/mac/startup.html";
+        window.location.href = "src/mac/shutdown.html";
       } else if (os === "window") {
-        window.location.href = "src/windows/startup.html";
+        window.location.href = "src/windows/shutdown.html";
       }
     }
 
