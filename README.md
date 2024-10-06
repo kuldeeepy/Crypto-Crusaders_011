@@ -91,21 +91,21 @@ As soon as the user enters on home page, there are two ways which user can use t
 
 - Terminal (via commands)
 
-![App Screenshot](https://snipboard.io/9A02cE.jpg)
+![App Screenshot](https://snipboard.io/5TevIq.jpg)
 
 View of different operating system's UI
 
 - (macOS)
 
-![App Screenshot](https://snipboard.io/rxM39Y.jpg)
+![App Screenshot](https://snipboard.io/INvKM7.jpg)
 
 - (Ubuntu)
 
-![App Screenshot](https://snipboard.io/0PUuJL.jpg)
+![App Screenshot](https://snipboard.io/Dg7TMh.jpg)
 
 - (Windows)
 
-![App Screenshot](https://snipboard.io/fhpwVT.jpg)
+![App Screenshot](https://snipboard.io/Ixua2m.jpg)
 
 ## Technology Stack
 
@@ -115,7 +115,7 @@ View of different operating system's UI
 
 ## FAQ
 
-#### Did you use any external inbuilt components?
+#### Did you use any external components?
 
 No, we created every single component together.
 
