@@ -43,13 +43,13 @@ Crypto-Crusaders_011/
 
 A detailed walkthrough of all the features of our project.
 
-### [Watch the video &#11118;](https://www.youtube.com)
+### [Watch the video &#11118;](https://youtu.be/c3_P6mWHSEk)
 
 ## Video Walkthrough of the codebase
 
 A quick walkthrough of the project structure.
 
-### [Watch the video &#11118;](https://www.youtube.com)
+### [Watch the video &#11118;](https://youtu.be/DcalqQ0_JdE)
 
 ## Features
 
