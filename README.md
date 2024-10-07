@@ -129,4 +129,4 @@ This project is deployed on vercel as a static site.
 
 ## Contributor's
 
-[Akash](https://www.linkedin.com/in/akash-srivastava-b3b3041bb) | [Anisha](https://www.linkedin.com/in/anisha-singh-9a4640295) | [Harsh](linkedin.com/in/harsh-m-756b912a5) | [Kartik](https://www.linkedin.com/in/kartik-chaudhari) | [Kuldeep](https://www.linkedin.com/in/kuldeeep-yadav)
+[Akash](https://www.linkedin.com/in/akash-srivastava-b3b3041bb) | [Anisha](https://www.linkedin.com/in/anisha-singh-9a4640295) | [Harsh](https://www.linkedin.com/in/harsh-m-756b912a5) | [Kartik](https://www.linkedin.com/in/kartik-chaudhari) | [Kuldeep](https://www.linkedin.com/in/kuldeeep-yadav)
